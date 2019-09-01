@@ -8,7 +8,14 @@ float subtraction(float a, float b) {
     return a - b;
 }
 
-float
+float multiply(float a, float b) {
+    return a * b;
+}
+
+float devide(float a, float b) {
+    return a / b;
+}
+
 
 int main() {
     char operator;
@@ -30,10 +37,14 @@ int main() {
                 result = subtraction(a, b);
                 break;
         case'*':
-                result = a * b;
+                result = multiply(a, b);
                 break;
         case'/':
-                result = a / b;
+                if (b == 0) {
+                    printf("2nd oprend must be non zero\b");
+                    return 0;
+                }
+                result = devide(a, b);
                 break;
         default:
                 printf("\n invalid operator");
