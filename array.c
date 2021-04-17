@@ -1,6 +1,6 @@
 
 #include <stdio.h> 
-void main()
+int main()
 {
    int array[100],c, n, value;
  
@@ -20,5 +20,5 @@ void main()
    for (c = 0; c <= n; c++)
       printf("%d\n", array[c]);
  
-   getch();
+   return 0;
 }
